@@ -1,0 +1,29 @@
+@import '@/css/variables/_grid.scss';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+
+  @media #{$media-sm-up} {
+    overflow-y: overlay;
+  }
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+
+.v-input {
+  &.v-text-field, &.v-select {
+    font-size: 14px;
+  }
+  .v-label {
+    font-size: 14px;
+  }
+  input {
+    font-size: 14px;
+  }
+}

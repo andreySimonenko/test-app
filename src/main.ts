@@ -1,8 +1,18 @@
 import Vue from 'vue'
 import App from './App.vue'
+import store from './store'
+import router from './router'
+import vuetify from './plugins/vuetify'
+import interceptorsSetup from './utils/interceptors'
+import '@/css/main.scss'
+
+interceptorsSetup()
 
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(App),
+  store,
+  router,
+  vuetify,
+  render: h => h(App)
 }).$mount('#app')
